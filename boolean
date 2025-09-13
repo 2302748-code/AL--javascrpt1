@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Eligibility</title>
+</head>
+<body>
+
+    <h2>Check Voting Eligibility</h2>
+    
+    <!-- Input field for the user's age -->
+    <input type="number" id="ageInput" placeholder="Enter your age">
+    <button onclick="checkVotingEligibility()">Check Eligibility</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkVotingEligibility() {
+            // Get the age input by the user
+            let age = document.getElementById('ageInput').value;
+
+            // Boolean variable to check voting eligibility
+            let isEligibleToVote = age >= 18;
+
+            // Display the result based on the boolean value
+            if (isEligibleToVote) {
+                document.getElementById('result').innerText = "You are eligible to vote!";
+            } else {
+                document.getElementById('result').innerText = "You are not eligible to vote.";
+            }
+        }
+    </script>
+
+</body>
+</html>
